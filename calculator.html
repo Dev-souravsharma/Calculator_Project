@@ -30,7 +30,7 @@
       <button class="buttonStyle" onclick="div()">/</button>
       <br /><br />
       <div style="margin-left: 80px">
-        <button class="buttonStyle" onclick="div()">Clear All</button>
+        <button class="buttonStyle" onclick="clearInput()">Clear All</button>
       </div>
     </div>
     <br /><br />
@@ -41,6 +41,10 @@
       document.getElementById("fname").innerHTML = a;
       let b = document.getElementById("lname").value;
       document.getElementById("lname").innerHTML = b;
+      if (isNaN(a) || isNaN(b)) {
+        alert("Please Enter Number");
+        return;
+      }
       let data = {
         a: a,
         b: b,
@@ -64,6 +68,10 @@
       document.getElementById("fname").innerHTML = a;
       let b = document.getElementById("lname").value;
       document.getElementById("lname").innerHTML = b;
+      if (isNaN(a) || isNaN(b)) {
+        alert("Please Enter Number");
+        return;
+      }
       let data = {
         a: a,
         b: b,
@@ -87,6 +95,10 @@
       document.getElementById("fname").innerHTML = a;
       let b = document.getElementById("lname").value;
       document.getElementById("lname").innerHTML = b;
+      if (isNaN(a) || isNaN(b)) {
+        alert("Please Enter Number");
+        return;
+      }
       let data = {
         a: a,
         b: b,
@@ -110,6 +122,10 @@
       document.getElementById("fname").innerHTML = a;
       let b = document.getElementById("lname").value;
       document.getElementById("lname").innerHTML = b;
+      if (isNaN(a) || isNaN(b)) {
+        alert("Please Enter Number");
+        return;
+      }
       let data = {
         a: a,
         b: b,
@@ -127,6 +143,11 @@
           console.log("Ans", data.ans);
           document.getElementById("result").value = data.ans;
         });
+    }
+    function clearInput() {
+      document.getElementById("fname").value = "";
+      document.getElementById("lname").value = "";
+      document.getElementById("result").value = "";
     }
   </script>
 </html>
